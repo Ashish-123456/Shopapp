@@ -43,24 +43,22 @@ const CartItem = ({item}) => {
   return (
     <Component>
       <LeftComponent>
-          <img scr={item.url} alt="product" style={{height:110,width:110}}/>
-          <ButtonGroup/>
+          <img src={item.url} alt="product" style={{height:110,width:110}}/>
+          <ButtonGroup item={item}/>
       </LeftComponent>
       <Box style={{margin :20}}>
           <Typography>{addEllipsis(item.title.longTitle)}</Typography>
           <SmallText>Seller:RetailNet
-          <Box component="span"><img scr={fassured} alt="fassured_img" style={{width:50,marginLeft:10}}/></Box>
+          <Box component="span"><img src={fassured} alt="fassured_img" style={{width:50,marginLeft:10}}/></Box>
           </SmallText>
           <Typography style={{margin:'20px 0'}}>
              <Box component="span" style={{fontSize:18,fontWeight:600}}>₹{item.price.cost}</Box>&nbsp;&nbsp;&nbsp;
              <Box component="span" style={{color:'#878787'}}><strike>₹{item.price.mrp}</strike></Box>&nbsp;&nbsp;&nbsp;
              <Box component="span" style={{color:'#388E3C'}}>{item.price.discount}</Box>
           </Typography>
-          
           <Remove onClick={()=>removeItemFromCart(item.id)}>REMOVE</Remove>
       </Box>
     </Component>
   )
 }
-
 export default CartItem

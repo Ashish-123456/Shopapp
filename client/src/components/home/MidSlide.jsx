@@ -14,8 +14,8 @@ const LeftComponent=styled(Box)(({theme})=>({
 const RightComponent=styled(Box)(({theme})=>({
     background:'#ffffff',
     padding:'5 15',
-    marginTop:10,
-    marginLeft:10,
+    marginTop:15,
+    marginLeft:20,
     width:'20%',
     textAllign:'center',
     [theme.breakpoints.down('md')]:{

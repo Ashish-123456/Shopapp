@@ -4,16 +4,19 @@ import {Box} from '@mui/material';
 import  {DataProvider} from '../src/context/DataProvider'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import DetailView from './components/details/DetailView';
-import Cart from "./components/cart/Cart"
+import Cart from "./components/cart/Cart";
 
 
 
 function App() {
   return (
     <DataProvider>
-       <Header/>
+    
+       
        <BrowserRouter>
+       <Header/>
        <Box style={{marginTop:55}}>
+       
         <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/product/:id' element={<DetailView/>} /> 
@@ -21,6 +24,7 @@ function App() {
         </Routes>
        </Box>
        </BrowserRouter>
+       
     </DataProvider>
   )
 }

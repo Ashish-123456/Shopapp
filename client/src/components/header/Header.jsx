@@ -4,14 +4,14 @@ import {AppBar,Box,IconButton,Toolbar,Typography,styled,Drawer,List,ListItem} fr
 import MenuIcon from '@mui/icons-material/Menu';
 import Search from './Search';
 import CustomButtons from './CustomButtons';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const StyledHeader=styled(AppBar)`
     background:#2874f0;
     height:55px;
 `
-const Component=styled(Box)`
+const Component=styled(Link)`
     margin-left:12%;
 `
 const SubHeading=styled(Typography)`
@@ -62,13 +62,13 @@ return (
                 </List>
             </Box>
          </Drawer>
-            <Component>
-                <img  scr={logoUrl} alt='logo' style={{width:75}} />
+            <Component to="/">
+                <img  src={logoUrl} alt='logo' style={{width:75}} />
                  <Box style={{display:'flex'}} >
                  <SubHeading >Explore
                  <Box component='span' style={{color:'yellow'}}>Plus</Box>
                  </SubHeading>
-                 <PlusImage scr={subURL} alt='+' />
+                 <PlusImage src={subURL} alt='+' />
                  </Box>
             </Component>
              <Search/>

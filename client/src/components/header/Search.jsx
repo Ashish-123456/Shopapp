@@ -1,10 +1,10 @@
 // import styled from '@emotion/styled'
-import { InputBase,Box ,styled,  List ,ListItem} from '@mui/material'
-import React, { useState ,useEffect} from 'react'
+import { InputBase,Box ,styled, List ,ListItem} from '@mui/material'
+import React, { useState ,useEffect} from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProducts } from '../../redux/actions/productAction';
-import { Link, useNavigate } from 'react-router-dom';
+import { getProducts as listProducts} from '../../redux/actions/productAction';
+import { Link, Router } from 'react-router-dom';
 const StyleSearch=styled(Box)`
     background:#fff;
     width:38%;
@@ -36,7 +36,7 @@ const Search = () => {
     const dispatch=useDispatch();
     // const navigate=useNavigate();
     useEffect(()=>{
-        dispatch(getProducts());
+        dispatch(listProducts());
     },[dispatch])
 
     const getText=(text)=>{
@@ -56,31 +56,27 @@ return (
         {
             
             text &&
+            
             <ListWrapper>
                 {
                     
-                    products.filter(product => product.title.longTitle.toLowerCase().
-                    includes(text.toLowerCase())).map(product=>(
-                        <ListItem>
+                    products.filter(product => product.title.longTitle.toLowerCase().includes(text.toLowerCase())).map(product=>(
+                        <ListItem >
+                        <Link
+                            to={`/product/${product.id}`} 
+                            style={{textDecoration:'none',color:'inherit'}}
+                             onClick={()=>setText()}
+                            >
                         {product.title.longTitle}
+                        </Link> 
                         </ListItem>
                 ))
                 }
             </ListWrapper>
+            
         }
     </StyleSearch>
-  )
+  ) 
 }
-
 export default Search
-
-{/* <Link  */}
-                            {/* // to={`/product/product.2`}
-                            //     onClick={setText('')}
-                            // style={{textDecoration:'none',color:'inherit'}}
-                            // >  */}
-                            
-                            
-                         {/* </Link> */}
- {/* <ListItem onClick={()=>{navigate(`/product/${product.id}`)}}> */}
                        

@@ -7,7 +7,9 @@ export const cartReducer=(state={cartItems:[]},action)=>{
             const exist=state.cartItems.find(product=>product.id===item.id);
 
             if(exist){
-                return {...state,cartItems:state.cartItems.map(data=>data.product===exist.product?item:data)}
+                // return {...state,cartItems:state.cartItems.map((data,idx)=>(cartItems[idx].quantity=data.id===item.id?item.quantity:data.quanity))};
+                // return state;
+                return {...state,cartItems:state.cartItems.map((data)=>(data.id===item.id?item:data))}
             }else{
                 return {...state,cartItems:[...state.cartItems,item]}
             }

@@ -25,11 +25,15 @@ const ButtonWrapper=styled(Box)`
 const StyledButton=styled(Button)`
     display:flex;
     margin-left:auto;
-    background:'#fb641b';
+    background:#fb641b;
     color:#fff;
     width:250px;
     height:51px;
-    border-radius:2px;
+    border-radius:5px;
+    &:hover {
+    color:#fff;
+    background:#fb641b;
+  }
 `
 const LeftComponent=styled(Grid)(({theme})=>({
     paddingRight:15,
@@ -51,7 +55,7 @@ const Cart = () => {
               <Container container>
                     <LeftComponent item lg={9} md={9} sm={12}>  
                         <Header>
-                            <Typography>My Cart({cartItems.length})</Typography>
+                            <Typography>My Cart({cartItems?.length})</Typography>
                         </Header>
                         {
                             cartItems.map(item=>(

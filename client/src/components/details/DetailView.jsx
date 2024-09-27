@@ -15,7 +15,7 @@ const Container=styled(Grid)`
 `
 const RightContainer=styled(Grid)`
   margin-top:50px;
-  padding-left:25px;
+  padding-left:50px;
   & > p{
     margin-top:10px;
   }

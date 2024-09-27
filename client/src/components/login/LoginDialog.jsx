@@ -74,7 +74,7 @@ const LoginDialog=({open,setOpen})=>{
     const [signup,setSignup]=useState(signupinitialValue);
     const [login,setLogin]=useState(logininitialvalue);
     const [error,setError]=useState(false);
-    const {setAccount }=useContext(DataContext);
+    const {setAccount } = useContext(DataContext);
      
     const onValueChange=(e)=>{
         setLogin({...login,[e.target.name]:e.target.value});

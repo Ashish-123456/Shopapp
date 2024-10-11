@@ -63,9 +63,10 @@ return (
             </Box>
          </Drawer>
             <Component to="/">
-                <img  src={logoUrl} alt='logo' style={{width:75}} />
+                {/* <img  src={logoUrl} alt='logo' style={{width:75}} /> */}
+                 <div style={{width:105,height:20, fontWeight:800, color:"white"}} >ShopApp</div>
                  <Box style={{display:'flex'}} >
-                 <SubHeading >Explore
+                 <SubHeading style={{color:"white"}} >Explore
                  <Box component='span' style={{color:'yellow'}}>Plus</Box>
                  </SubHeading>
                  <PlusImage src={subURL} alt='+' />

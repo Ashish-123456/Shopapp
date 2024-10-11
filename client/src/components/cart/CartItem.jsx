@@ -49,7 +49,7 @@ const CartItem = ({item}) => {
       <Box style={{margin :20}}>
           <Typography>{addEllipsis(item.title.longTitle)}</Typography>
           <SmallText>Seller:RetailNet
-          <Box component="span"><img src={fassured} alt="fassured_img" style={{width:50,marginLeft:10}}/></Box>
+          <Box component="span"><img src="" alt="Sassured_img" style={{width:50,marginLeft:10}}/></Box>
           </SmallText>
           <Typography style={{margin:'20px 0'}}>
              <Box component="span" style={{fontSize:18,fontWeight:600}}>₹{item.price.cost}</Box>&nbsp;&nbsp;&nbsp;

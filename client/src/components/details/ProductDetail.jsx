@@ -35,7 +35,7 @@ const ProductDetail = ({product}) => {
         <Typography>{product.title.longTitle}</Typography>
         <Typography style={{margin:5,color:'#878787',fontSize:14}}
             >8 Ratings & 1 Reviews
-            <Box component="span"><img src={fassured} alt='Fassured_img' style={{width:77,marginLeft:20}}/></Box>
+            <Box component="span"><img src="" alt="Sassured_img" style={{width:77,marginLeft:20}}/></Box>
         </Typography>
         <Typography>
                 <Box component="span" style={{fontSize:28}}>₹{product.price.cost}</Box>&nbsp;&nbsp;&nbsp;

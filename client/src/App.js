@@ -11,12 +11,9 @@ import Cart from "./components/cart/Cart";
 function App() {
   return (
     <DataProvider>
-    
-       
        <BrowserRouter>
        <Header/>
        <Box style={{marginTop:55}}>
-       
         <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/product/:id' element={<DetailView/>} /> 
@@ -24,7 +21,6 @@ function App() {
         </Routes>
        </Box>
        </BrowserRouter>
-       
     </DataProvider>
   )
 }
